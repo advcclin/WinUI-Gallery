@@ -171,6 +171,7 @@
                 <!-- This is the rounded corner on the Top left of the L Pattern -->
                 <CornerRadius x:Key="NavigationViewContentGridCornerRadius">8,0,0,0</CornerRadius>
             </NavigationView.Resources>
+            <!--
             <NavigationView.AutoSuggestBox>
                 <AutoSuggestBox
                     x:Name="controlsSearchBox"
@@ -190,6 +191,7 @@
                     </AutoSuggestBox.KeyboardAccelerators>
                 </AutoSuggestBox>
             </NavigationView.AutoSuggestBox>
+            -->
 
             <Frame
                 x:Name="rootFrame"
@@ -255,6 +257,12 @@
                     x:Name="AllControlsItem"
                     Content="All samples"
                     Icon="AllApps" />
+                
+                <NavigationViewItem
+                    x:Name="Dashboard"
+                    AutomationProperties.AutomationId="Dashboard"
+                    Content="Dashboard"
+                    Icon="ViewAll" />
                 <NavigationViewItemSeparator />
             </NavigationView.MenuItems>
         </NavigationView>

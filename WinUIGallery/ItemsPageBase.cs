@@ -19,6 +19,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media.Animation;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace WinUIGallery
 {
@@ -62,7 +63,7 @@ namespace WinUIGallery
             var item = (ControlInfoDataItem)e.ClickedItem;
 
             _itemId = item.UniqueId;
-
+            Debug.Print("OnItemGridViewItemClick: " + _itemId);
             NavigationRootPage.GetForElement(this).Navigate(typeof(ItemPage), _itemId, new DrillInNavigationTransitionInfo());
         }
 

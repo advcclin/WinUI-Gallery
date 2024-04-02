@@ -1,0 +1,116 @@
+<UserControl
+    x:Class="WinUIGallery.Controls.DashboardTile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:WinUIGallery.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="210"
+    Height="120"
+    mc:Ignorable="d">
+
+    <Grid
+        HorizontalAlignment="Stretch"
+        Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}"
+        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+        BorderThickness="1"
+        CornerRadius="{StaticResource ControlCornerRadius}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="LayoutVisualStates">
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource Breakpoint640Plus}" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters />
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="controlRootD.Width" Value="Auto" />
+                        <Setter Target="controlRootD.Height" Value="120" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+<!--
+        <Grid Width="72" CornerRadius="{ThemeResource ControlCornerRadius}">
+            <Image
+                x:Name="gridImage"
+                Width="48"
+                VerticalAlignment="Center"
+                AutomationProperties.Name="{x:Bind Title, Mode=OneWay}"
+                Source="{x:Bind ImagePath, Mode=OneWay}"
+                Stretch="Uniform" />
+        </Grid>
+-->
+        <Grid Margin="16,10,0,0">
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <FontIcon
+                    FontSize="16"
+                    Foreground="{ThemeResource TextFillColorPrimaryBrush}"
+                    Glyph="{x:Bind FontIconGlyph, Mode=OneWay}" />
+                <TextBlock
+                    Style="{StaticResource BodyStrongTextBlockStyle}"
+                    Text="{x:Bind Title, Mode=OneWay}"
+                    TextWrapping="NoWrap" />
+            </StackPanel>
+        </Grid>
+
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="16,0,0,0"
+            VerticalAlignment="Center"
+            Orientation="Vertical"
+            Spacing="2">
+            <TextBlock
+                x:Name="subtitleText1"
+                FontSize="12"
+                Style="{StaticResource BodyStrongTextBlockStyle}"
+                Text="{x:Bind Subtitle1, Mode=OneWay}"
+                TextLineBounds="TrimToCapHeight"
+                TextWrapping="NoWrap" />
+            <TextBlock
+                Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                RelativePanel.Below="subtitleText1"
+                Style="{StaticResource TitleTextBlockStyle}"
+                Text="12"
+                TextTrimming="CharacterEllipsis" />
+        </StackPanel>
+        
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="16,0,0,0"
+            VerticalAlignment="Center"
+            Orientation="Vertical"
+            Spacing="2">
+            <TextBlock
+                x:Name="subtitleText2"
+                FontSize="12"
+                Style="{StaticResource BodyStrongTextBlockStyle}"
+                Text="{x:Bind Subtitle2, Mode=OneWay}"
+                TextLineBounds="TrimToCapHeight"
+                TextWrapping="NoWrap" />
+            <TextBlock
+                Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                RelativePanel.Below="subtitleText2"
+                Style="{StaticResource TitleTextBlockStyle}"
+                Text="23"
+                TextTrimming="CharacterEllipsis"
+                Visibility="{x:Bind Subtitle2, Converter={StaticResource emptyStringToVisibilityConverter}}" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

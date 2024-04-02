@@ -2164,19 +2164,6 @@
       "IconGlyph": "",
       "Items": [
         {
-          "UniqueId": "AA",
-          "Title": "!AForTest",
-          "ApiNamespace": "",
-          "Subtitle": "AA backgrounds.",
-          "ImagePath": "ms-appx:///Assets/ControlImages/Acrylic.png",
-          "Description": "AA translucent material recommended for panel backgrounds.",
-          "SourcePath": "",
-          "Docs": [
-          ],
-          "RelatedControls": [
-          ]
-        },
-        {
           "UniqueId": "Acrylic",
           "Title": "AcrylicBrush",
           "ApiNamespace": "Microsoft.UI.Xaml.Media",

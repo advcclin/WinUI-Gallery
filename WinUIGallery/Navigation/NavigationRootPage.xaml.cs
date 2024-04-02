@@ -77,7 +77,7 @@ namespace WinUIGallery
             _navHelper = new RootFrameNavigationHelper(rootFrame, NavigationViewControl);
 
             SetDeviceFamily();
-            AddNavigationMenuItems();
+            //AddNavigationMenuItems();
 
             this.GotFocus += (object sender, RoutedEventArgs e) =>
             {
@@ -121,6 +121,7 @@ namespace WinUIGallery
 
         private void OnPaneDisplayModeChanged(NavigationView sender, NavigationViewDisplayModeChangedEventArgs args)
         {
+            Debug.Print("Display mode changed");
             if (sender.PaneDisplayMode == NavigationViewPaneDisplayMode.Top)
             {
                 VisualStateManager.GoToState(this, "Top", true);
@@ -206,6 +207,7 @@ namespace WinUIGallery
         {
             foreach (var group in ControlInfoDataSource.Instance.Groups.OrderBy(i => i.Title).Where(i => !i.IsSpecialSection))
             {
+                //Debug.Print("New NavViewItem: " + group.Title);
                 var itemGroup = new NavigationViewItem() { Content = group.Title, Tag = group.UniqueId, DataContext = group, Icon = GetIcon(group.IconGlyph) };
 
                 var groupMenuFlyoutItem = new MenuFlyoutItem() { Text = $"Copy Link to {group.Title} samples", Icon = new FontIcon() { Glyph = "\uE8C8" }, Tag = group };
@@ -217,6 +219,7 @@ namespace WinUIGallery
 
                 foreach (var item in group.Items)
                 {
+                    //Debug.Print("New NavViewItem in Group: " + item.Title);
                     var itemInGroup = new NavigationViewItem() { IsEnabled = item.IncludedInBuild, Content = item.Title, Tag = item.UniqueId, DataContext = item };
 
                     var itemInGroupMenuFlyoutItem = new MenuFlyoutItem() { Text = $"Copy Link to {item.Title} sample", Icon = new FontIcon() { Glyph = "\uE8C8" }, Tag = item };
@@ -273,7 +276,7 @@ namespace WinUIGallery
         {
             if ( NavigationViewControl.DisplayMode == NavigationViewDisplayMode.Expanded)
             {
-                controlsSearchBox.Focus(FocusState.Keyboard);
+                //controlsSearchBox.Focus(FocusState.Keyboard);
             }
         }
 
@@ -298,6 +301,7 @@ namespace WinUIGallery
         {
             if (args.IsSettingsSelected)
             {
+                Debug.Print("Settings selected!");
                 if (rootFrame.CurrentSourcePageType != typeof(SettingsPage))
                 {
                     Navigate(typeof(SettingsPage));
@@ -306,11 +310,19 @@ namespace WinUIGallery
             else
             {
                 var selectedItem = args.SelectedItemContainer;
+                Debug.Print("Selected Item: " + selectedItem.Name);
                 if (selectedItem == AllControlsItem)
                 {
                     if (rootFrame.CurrentSourcePageType != typeof(AllControlsPage))
                     {
                         Navigate(typeof(AllControlsPage));
+                    }
+                }
+                else if (selectedItem == Dashboard)
+                {
+                    if (rootFrame.CurrentSourcePageType != typeof(DashboardPage))
+                    {
+                        Navigate(typeof(DashboardPage));
                     }
                 }
                 else if (selectedItem == Home)
@@ -373,7 +385,7 @@ namespace WinUIGallery
         {
             TestContentLoadedCheckBox.IsChecked = false;
         }
-
+        /*
         private void OnControlsSearchBoxTextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
             if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
@@ -436,7 +448,7 @@ namespace WinUIGallery
                 Navigate(typeof(SearchResultsPage), args.QueryText);
             }
         }
-
+        */
         public bool EnsureItemIsVisibleInNavigation(string name)
         {
             bool changedSelection = false;
@@ -503,10 +515,12 @@ namespace WinUIGallery
             }
             return changedSelection;
         }
+        /*
         private void CtrlF_Invoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
         {
             controlsSearchBox.Focus(FocusState.Programmatic);
         }
+        */
 
         #region Helpers for test automation
 

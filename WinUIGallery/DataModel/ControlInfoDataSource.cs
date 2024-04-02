@@ -10,6 +10,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -196,7 +197,8 @@ namespace WinUIGallery.Data
                         { IsNew: true } => "New",
                         { IsUpdated: true } => "Updated",
                         { IsPreview: true } => "Preview",
-                        _ => null
+                        _ => ""
+                        //_ => null
                     };
                     string pageString = $"{pageRoot}{item.UniqueId}Page";
                     Type? pageType = Type.GetType(pageString);
@@ -211,6 +213,7 @@ namespace WinUIGallery.Data
                 {
                     if (!Groups.Any(g => g.Title == group.Title))
                     {
+                        Debug.Print("ControlInfoDataGroup - Add Group: " + group.Title);
                         Groups.Add(group);
                     }
                 }

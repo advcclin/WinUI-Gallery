@@ -20,7 +20,7 @@ using CommunityToolkit.WinUI;
 namespace WinUIGallery.Controls
 {
     // ATTRIBUTION: @RykenApps
-    public sealed partial class HomePageHeaderImage : UserControl
+    public sealed partial class DashboardPageHeaderImage : UserControl
     {
         private Compositor _compositor;
         private CompositionLinearGradientBrush _imageGridBottomGradientBrush;
@@ -32,7 +32,7 @@ namespace WinUIGallery.Controls
         private Visual _imageGridVisual;
         private CompositionVisualSurface _imageGridVisualSurface;
         private const string GradientSizeKey = "GradientSize";
-        public HomePageHeaderImage()
+        public DashboardPageHeaderImage()
         {
             this.InitializeComponent();
         }
@@ -94,9 +94,9 @@ namespace WinUIGallery.Controls
         }
         private void OnLoading(FrameworkElement sender, object args)
         {
-            if (HeroImage.Source == null)
+            if (DBGImage.Source == null)
             {
-                HeroImage.GetVisual().Opacity = 0;
+                DBGImage.GetVisual().Opacity = 0;
             }
             else
             {
@@ -118,12 +118,12 @@ namespace WinUIGallery.Controls
             AnimationBuilder.Create()
                 .Opacity(1, 0, duration: TimeSpan.FromMilliseconds(300), easingMode: EasingMode.EaseOut)
                 .Scale(1, 1.1f, duration: TimeSpan.FromMilliseconds(400), easingMode: EasingMode.EaseOut)
-                .Start(HeroImage);
+                .Start(DBGImage);
 
             AnimationBuilder.Create()
                 .Opacity(0.5, 0, duration: TimeSpan.FromMilliseconds(300), easingMode: EasingMode.EaseOut)
                 .Scale(1, 1.1f, duration: TimeSpan.FromMilliseconds(400), easingMode: EasingMode.EaseOut)
-                .Start(HeroOverlayImage);
+                .Start(DBGOverlayImage);
         }
 
 
@@ -137,7 +137,6 @@ namespace WinUIGallery.Controls
     }
 }
 
-/*
 public static class CompositionGradientBrushExtensions
 {
     /// <summary>
@@ -165,4 +164,3 @@ public static class CompositionGradientBrushExtensions
         compositionGradientBrush.ColorStops.Add(compositor.CreateColorGradientStop(colorStopEnd, Colors.Transparent));
     }
 }
-*/

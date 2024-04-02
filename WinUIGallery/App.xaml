@@ -19,6 +19,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <local:ItemTemplates />
+                <local:DashboardItemTemplates />
                 <XamlControlsResources />
                 <ResourceDictionary Source="/Controls/CopyButton/CopyButton.xaml" />
             </ResourceDictionary.MergedDictionaries>
@@ -43,6 +44,7 @@
 
             <!--  Application-specific resources  -->
             <x:String x:Key="ControlsName">All samples</x:String>
+            <x:String x:Key="DashboardName">Dashboard</x:String>
             <x:String x:Key="AppTitleName">WinUI 3 Gallery</x:String>
             
             <common:NullableBooleanToBooleanConverter x:Key="nullableBooleanToBooleanConverter" />

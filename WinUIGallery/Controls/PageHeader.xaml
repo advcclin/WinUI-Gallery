@@ -75,7 +75,7 @@
                         </Flyout>
                     </DropDownButton.Flyout>
                 </DropDownButton>
-                <DropDownButton AutomationProperties.Name="Source code" ToolTipService.ToolTip="Source code of this sample page">
+                <DropDownButton AutomationProperties.Name="Source code" ToolTipService.ToolTip="Source code of this sample page" Visibility="{x:Bind Item.SourcePath, Converter={StaticResource emptyStringToVisibilityConverter}}">
                     <DropDownButton.Content>
                         <StackPanel Orientation="Horizontal" Spacing="8">
                             <PathIcon
