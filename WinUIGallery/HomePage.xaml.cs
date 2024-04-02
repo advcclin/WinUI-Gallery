@@ -27,7 +27,8 @@ namespace WinUIGallery
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             NavigationRootPageArgs args = (NavigationRootPageArgs)e.Parameter;
-            var menuItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.NavigationRootPage.NavigationView.MenuItems.First();
+            //var menuItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.NavigationRootPage.NavigationView.MenuItems.First();
+            var menuItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.NavigationRootPage.NavigationView.MenuItems.ElementAt(4);
             menuItem.IsSelected = true;
 
             Items = ControlInfoDataSource.Instance.Groups.SelectMany(g => g.Items.Where(i => i.BadgeString != null)).OrderBy(i => i.Title).ToList();

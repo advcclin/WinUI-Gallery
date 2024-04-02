@@ -27,7 +27,7 @@ namespace WinUIGallery
         {
             NavigationRootPageArgs args = (NavigationRootPageArgs)e.Parameter;
 
-            var menuItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.NavigationRootPage.NavigationView.MenuItems.ElementAt(2);
+            var menuItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.NavigationRootPage.NavigationView.MenuItems.ElementAt(6);
             menuItem.IsSelected = true;
 
             Items = ControlInfoDataSource.Instance.Groups.Where(g => !g.IsSpecialSection).SelectMany(g => g.Items).OrderBy(i => i.Title).ToList();

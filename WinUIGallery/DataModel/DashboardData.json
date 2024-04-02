@@ -1,0 +1,466 @@
+{
+  "Groups": [
+    {
+      "UniqueId": "Design_Guidance",
+      "Title": "Design guidance",
+      "IconGlyph": "",
+      "IsSpecialSection": true,
+      "Folder": "DesignGuidance",
+      "Items": [
+        {
+          "UniqueId": "Typography",
+          "Title": "Typography",
+          "SourcePath": "/CommonStyles/TextBlock_themeresources.xaml",
+          "Docs": [
+            {
+              "Title": "Typography in Windows Apps",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/style/typography"
+            },
+            {
+              "Title": "XAML theme resources",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/style/xaml-theme-resources#the-xaml-type-ramp"
+            },
+            {
+              "Title": "Typography in Windows 11",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/signature-experiences/typography"
+            }
+          ]
+        },
+        {
+          "UniqueId": "Icons",
+          "Title": "Icons",
+          "Docs": [
+            {
+              "Title": "Iconography in Windows 11",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/signature-experiences/iconography#system-icons"
+            },
+            {
+              "Title": "Segoe Fluent Icons font",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/style/segoe-fluent-icons-font"
+            }
+          ]
+        },
+        {
+          "UniqueId": "Colors",
+          "Title": "Colors",
+          "Docs": [
+            {
+              "Title": "Colors in Windows 11",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/signature-experiences/color"
+            },
+            {
+              "Title": "Windows UI Toolkit (Figma)",
+              "Uri": "https://www.figma.com/community/file/1159947337437047524"
+            },
+            {
+              "Title": "WinUI Theme Resources (GitHub)",
+              "Uri": "https://github.com/microsoft/microsoft-ui-xaml/blob/winui3/release/1.4-stable/controls/dev/CommonStyles/Common_themeresources_any.xaml"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "UniqueId": "AccessibilityItem",
+      "Title": "Accessibility",
+      "IsSpecialSection": true,
+      "Folder": "Accessibility",
+      "Items": [
+        {
+          "UniqueId": "AccessibilityColorContrast",
+          "Title": "Color Contrast",
+          "ImagePath": "ms-appx:///Assets/ControlImages/AppBarSeparator.png",
+          "Docs": [
+            {
+              "Title": "Accessibility",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/accessibility/accessibility"
+            },
+            {
+              "Title": "Automation Properties - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.automation.automationproperties"
+            }
+          ]
+        },
+        {
+          "UniqueId": "AccessibilityKeyboard",
+          "Title": "Keyboard Support",
+          "ImagePath": "ms-appx:///Assets/ControlImages/AppBarSeparator.png",
+          "Docs": [
+            {
+              "Title": "Accessibility",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/accessibility/accessibility"
+            },
+            {
+              "Title": "Accessibility overview",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/accessibility/accessibility-overview"
+            },
+            {
+              "Title": "Keyboard accessibility",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/accessibility/keyboard-accessibility"
+            },
+            {
+              "Title": "Keyboard interactions",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/input/keyboard-interactions"
+            },
+            {
+              "Title": "Access keys",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/input/access-keys"
+            },
+            {
+              "Title": "Keyboard accelerators",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/input/keyboard-accelerators"
+            },
+            {
+              "Title": "Focus navigation for keyboard, gamepad, remote control, and accessibility tools",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/input/focus-navigation"
+            },
+            {
+              "Title": "Automation Properties - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.automation.automationproperties"
+            }
+          ]
+        },
+        {
+          "UniqueId": "AccessibilityScreenReader",
+          "Title": "Screen Reader Support",
+          "ImagePath": "ms-appx:///Assets/ControlImages/AppBarSeparator.png",
+          "Docs": [
+            {
+              "Title": "Accessibility",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/accessibility/accessibility"
+            },
+            {
+              "Title": "Accessibility overview",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/accessibility/accessibility-overview"
+            },
+            {
+              "Title": "Expose basic accessibility information",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/accessibility/basic-accessibility-information"
+            },
+            {
+              "Title": "Landmarks and Headings",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/accessibility/landmarks-and-headings"
+            },
+            {
+              "Title": "Accessible text requirements",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/accessibility/accessible-text-requirements"
+            },
+            {
+              "Title": "Complete guide to Narrator",
+              "Uri": "https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "UniqueId": "BasicInput",
+      "Title": "Basic input",
+      "ImagePath": "",
+      "IconGlyph": "",
+      "Items": [
+        {
+          "UniqueId": "InputValidation",
+          "Title": "InputValidation",
+          "Subtitle": "A feature to display developer-defined errors for text values",
+          "ApiNamespace": "Microsoft.UI.Xaml.Controls",
+          "ImagePath": "ms-appx:///Assets/ControlImages/InputValidation.png",
+          "Description": "A feature that will display an error for invalid text. The app is notified when text has been changed by the user and is responsible for determining whether the text is valid and the error message",
+          "Content": "<p>Look at the <i>InputValidationPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
+          "RelatedControls": [
+            "TextBox",
+            "PasswordBox"
+          ]
+        },
+        {
+          "UniqueId": "Button",
+          "Title": "Button",
+          "ApiNamespace": "Microsoft.UI.Xaml.Controls",
+          "Subtitle": "A control that responds to user input and raises a Click event.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Button.png",
+          "Description": "The Button control provides a Click event to respond to user input from a touch, mouse, keyboard, stylus, or other input device. You can put different kinds of content in a button, such as text or an image, or you can restyle a button to give it a new look.",
+          "Content": "<p>The main purpose of a <b>Button</b> is to make something happen when a user clicks it. There are two ways you can make something happen:</p><ul><li>Handle the <b>Click</b> event.</li><li>Bind the <b>Command</b> property to an ICommand implementation that describes the command logic.</li></ul><p>Buttons often have only simple string content, but you can use any object as content. You can also change the style and template to give them any look you want.</p><p>Look at the <i>ButtonPage.xaml</i> file in Visual Studio to see the custom button style and template definitions used on this page.</p>",
+          "IsUpdated": true,
+          "SourcePath": "/CommonStyles/Button_themeresources.xaml",
+          "Docs": [
+            {
+              "Title": "Button - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.button"
+            },
+            {
+              "Title": "Guidelines",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/controls/buttons"
+            }
+          ],
+          "RelatedControls": [
+            "ToggleButton",
+            "RepeatButton",
+            "HyperlinkButton",
+            "AppBarButton"
+          ]
+        }
+      ]
+    },
+    {
+      "UniqueId": "Styles",
+      "Title": "Styles",
+      "ImagePath": "",
+      "IconGlyph": "",
+      "Items": [
+        {
+          "UniqueId": "AA",
+          "Title": "!AForTest",
+          "ApiNamespace": "",
+          "Subtitle": "AA backgrounds.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Acrylic.png",
+          "Description": "AA translucent material recommended for panel backgrounds.",
+          "SourcePath": "",
+          "Docs": [
+          ],
+          "RelatedControls": [
+          ]
+        },
+        {
+          "UniqueId": "Acrylic",
+          "Title": "AcrylicBrush",
+          "ApiNamespace": "Microsoft.UI.Xaml.Media",
+          "Subtitle": "A translucent material recommended for panel backgrounds.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Acrylic.png",
+          "Description": "A translucent material recommended for panel backgrounds.",
+          "SourcePath": "/Materials/Acrylic",
+          "Docs": [
+            {
+              "Title": "AcrylicBrush - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.acrylicbrush"
+            },
+            {
+              "Title": "Guidelines",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/style/acrylic"
+            }
+          ],
+          "RelatedControls": [
+            "SystemBackdrops"
+          ]
+        },
+        {
+          "UniqueId": "AnimatedIcon",
+          "Title": "AnimatedIcon",
+          "ApiNamespace": "Microsoft.UI.Xaml.Controls",
+          "Subtitle": "An element that displays and controls an icon that animates when the user interacts with the control.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/AnimatedIcon.png",
+          "Description": "An element that displays and controls an icon that animates when the user interacts with the control.",
+          "Content": "<p>Look at the <i>AnimatedIconPage.xaml</i> and <i>AnimatedIconPage.xaml.cs</i> files in Visual Studio to see the full code for this page.</p>",
+          "IsUpdated": true,
+          "SourcePath": "/AnimatedIcon",
+          "Docs": [
+            {
+              "Title": "AnimatedIcon - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedicon"
+            },
+            {
+              "Title": "Guidelines",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/controls/animated-icon"
+            },
+            {
+              "Title": "Lottie Overview",
+              "Uri": "https://learn.microsoft.com/windows/communitytoolkit/animations/lottie"
+            },
+            {
+              "Title": "Lottie Windows - GitHub",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedvisualplayer"
+            }
+          ]
+        },
+        {
+          "UniqueId": "ColorPaletteResources",
+          "Title": "ColorPaletteResources",
+          "ApiNamespace": "Microsoft.UI.Xaml",
+          "Subtitle": "A type of resource that allows you to apply custom colors to your controls.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/ColorPaletteResources.png",
+          "Description": "Apply custom colors to your controls through this cascading API, or scope them to a local subset.",
+          "Docs": [
+            {
+              "Title": "Theme Editor (GitHub)",
+              "Uri": "https://github.com/Microsoft/fluent-xaml-theme-editor"
+            },
+            {
+              "Title": "Guidelines",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/style/color#scoping-with-a-resourcedictionary"
+            },
+            {
+              "Title": "ColorPaletteResources - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.colorpaletteresources"
+            }
+          ]
+        },
+        {
+          "UniqueId": "CompactSizing",
+          "Title": "Compact Sizing",
+          "Subtitle": "How to use a Resource Dictionary to enable compact sizing.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/CompactSizing.png",
+          "Description": "Compact dictionary included in WinUI 2.1. Allows you to create compact smaller apps by adding this at the page or the grid level.",
+          "Docs": [
+            {
+              "Title": "Spacing",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/style/spacing"
+            }
+          ]
+        },
+        {
+          "UniqueId": "IconElement",
+          "Title": "IconElement",
+          "ApiNamespace": "Microsoft.UI.Xaml.Controls",
+          "Subtitle": "Represents icon controls that use different image types as its content.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Image.png",
+          "Description": "Represents icon controls that use different image types as its content.",
+          "Content": "<p>Look at the <i>IconElementPage.xaml</i> and <i>IconElementPage.xaml.cs</i> files in Visual Studio to see the full code for this page.</p>",
+          "SourcePath": "/ImageIcon",
+          "Docs": [
+            {
+              "Title": "BitmapIcon - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.bitmapicon"
+            },
+            {
+              "Title": "FontIcon - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.fonticon"
+            },
+            {
+              "Title": "ImageIcon - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.imageicon"
+            },
+            {
+              "Title": "PathIcon - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pathicon"
+            },
+            {
+              "Title": "SymbolIcon - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.symbolicon"
+            },
+            {
+              "Title": "Icon Guidelines",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/style/icons"
+            }
+          ],
+          "RelatedControls": [
+            "AnimatedIcon",
+            "AppBarButton",
+            "MenuFlyoutItem"
+          ]
+        },
+        {
+          "UniqueId": "RevealFocus",
+          "Title": "Reveal Focus",
+          "ApiNamespace": "Microsoft.UI.Xaml",
+          "Subtitle": "Customize the style of your focus rectangles.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/RevealFocus.png",
+          "Description": "Reveal focus allows you to adapt focus rectangles to look like the focus rectangles available on Xbox.",
+          "Content": "<p>Look at the <i>RevealFocusPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
+          "IsUpdated": true,
+          "SourcePath": "/Materials/Reveal",
+          "Docs": [
+            {
+              "Title": "Reveal Focus - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.application.focusvisualkind#Windows_UI_Xaml_Application_FocusVisualKind"
+            },
+            {
+              "Title": "Guidelines",
+              "Uri": "https://learn.microsoft.com/windows/apps/design/style/reveal-focus"
+            }
+          ],
+          "RelatedControls": [
+          ]
+        },
+        {
+          "UniqueId": "Line",
+          "Title": "Line",
+          "ApiNamespace": "Microsoft.UI.Xaml.Shapes",
+          "Subtitle": "Draws a straight line between two points.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Line.png",
+          "Description": "Draws a straight line between two points.",
+          "Content": "<p>Look at the <i>LinePage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
+          "Docs": [
+            {
+              "Title": "Lines - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.shapes"
+            },
+            {
+              "Title": "Guidelines",
+              "Uri": "https://learn.microsoft.com/previous-versions/windows/apps/hh465055(v=win.10)"
+            }
+          ],
+          "RelatedControls": [
+            "Shape"
+          ]
+        },
+        {
+          "UniqueId": "SystemBackdrops",
+          "Title": "System Backdrops (Mica/Acrylic)",
+          "ApiNamespace": "Microsoft.UI.Composition.SystemBackdrops",
+          "Subtitle": "System backdrops, like Mica and Acrylic, for the window.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Acrylic.png",
+          "Description": "System backdrops are used to provide a different background for a Window other than the default white or black (depending on Light or Dark theme). Mica and Desktop Acrylic are the current supported backdrops. There are two options for applying a backdrop: first, to use built-in Mica/Acrylic types, which have no customization and are simple to apply. The second is to create a customizable backdrop, which requires more code.",
+          "Content": "<p>Look at the <i>SampleSystemBackdropsWindow.xaml.cs</i> file in Visual Studio to see the full code for applying a backdrop.</p>",
+          "SourcePath": "/Materials",
+          "Docs": [
+            {
+              "Title": "MicaController - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.systembackdrops.micacontroller"
+            },
+            {
+              "Title": "DesktopAcrylicController - API",
+              "Uri": "https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.systembackdrops.desktopacryliccontroller"
+            }
+          ],
+          "RelatedControls": [
+          ]
+        }
+      ]
+    },
+    {
+      "UniqueId": "System",
+      "Title": "System",
+      "ImagePath": "",
+      "IconGlyph": "",
+      "Items": [
+        {
+          "UniqueId": "Clipboard",
+          "Title": "Clipboard",
+          "ApiNamespace": "Windows.ApplicationModel.DataTransfer",
+          "Subtitle": "Copy and paste to and from the system Clipboard.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/Clipboard.png",
+          "Description": "Copy and paste to and from the system Clipboard.",
+          "Content": "<p>Look at the <i>ClipboardPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
+          "IsNew": true,
+          "Docs": [
+            {
+              "Title": "Clipboard - API",
+              "Uri": "https://learn.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.clipboard"
+            }
+          ],
+          "RelatedControls": [
+            "FilePicker"
+          ]
+        },
+        {
+          "UniqueId": "FilePicker",
+          "Title": "FilePicker",
+          "ApiNamespace": "Windows.Storage.Pickers",
+          "Subtitle": "Access files and folders through the file pickers.",
+          "ImagePath": "ms-appx:///Assets/ControlImages/FilePicker.png",
+          "Description": "Shows how to access files and folders by letting the user choose them through the file pickers and how to save a file so that the user can specify the name, file type, and location of a file to save.",
+          "Content": "<p>Look at the <i>FilePickerPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
+          "IsNew": true,
+          "Docs": [
+            {
+              "Title": "FilePicker - API",
+              "Uri": "https://learn.microsoft.com/uwp/api/Windows.Storage.Pickers"
+            }
+          ],
+          "RelatedControls": [
+            "Clipboard"
+          ]
+        }
+      ]
+    }
+  ]
+}

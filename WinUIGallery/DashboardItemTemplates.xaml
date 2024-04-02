@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:data="using:WinUIGallery.Data">
 
-    <DataTemplate x:Key="DashboardItemTemplate" x:DataType="data:ControlInfoDataItem">
+    <DataTemplate x:Key="DashboardItemTemplate" x:DataType="data:DashboardDataItem">
         <UserControl>
             <Grid
                 x:Name="controlRootD"
@@ -86,21 +86,13 @@
                         TextTrimming="CharacterEllipsis" />
                     -->
                 </StackPanel>
-                <!--
+
                 <Grid
                     Grid.Column="2"
                     Width="20"
                     Margin="4"
                     VerticalAlignment="Top"
                     Visibility="{x:Bind BadgeString, Converter={StaticResource emptyStringToVisibilityConverter}}">
-                    <SymbolIcon Symbol="UnFavorite"/>
-                </Grid>
-                -->
-                <Grid
-                    Grid.Column="2"
-                    Width="20"
-                    Margin="4"
-                    VerticalAlignment="Top">
                     <SymbolIcon Symbol="Favorite"/>
                 </Grid>
             </Grid>

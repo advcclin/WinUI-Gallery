@@ -9,7 +9,7 @@
     //
     //*********************************************************
 -->
-<local:ItemsPageBase
+<local:DItemsPageBase
     x:Class="WinUIGallery.DashboardPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -103,4 +103,4 @@
             </GridView.GroupStyle>
         </GridView>
     </Grid>
-</local:ItemsPageBase>
+</local:DItemsPageBase>

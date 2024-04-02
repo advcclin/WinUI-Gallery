@@ -199,6 +199,22 @@
                 Navigating="OnRootFrameNavigating" />
             <NavigationView.MenuItems>
                 <NavigationViewItem
+                    x:Name="Dashboard"
+                    AutomationProperties.AutomationId="Dashboard"
+                    Content="Dashboard"
+                    Icon="ViewAll" />
+                <NavigationViewItem
+                    x:Name="Reporting"
+                    AutomationProperties.AutomationId="Reporting"
+                    Content="Reporting"
+                    Icon="Document" />
+                <NavigationViewItem
+                    x:Name="Alarm"
+                    AutomationProperties.AutomationId="Alarm"
+                    Content="Alarm"
+                    Icon="Message" />
+                <NavigationViewItemSeparator />
+                <NavigationViewItem
                     x:Name="Home"
                     AutomationProperties.AutomationId="Home"
                     Content="Home"
@@ -257,12 +273,7 @@
                     x:Name="AllControlsItem"
                     Content="All samples"
                     Icon="AllApps" />
-                
-                <NavigationViewItem
-                    x:Name="Dashboard"
-                    AutomationProperties.AutomationId="Dashboard"
-                    Content="Dashboard"
-                    Icon="ViewAll" />
+                   
                 <NavigationViewItemSeparator />
             </NavigationView.MenuItems>
         </NavigationView>

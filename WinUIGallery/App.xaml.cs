@@ -140,6 +140,7 @@ namespace WinUIGallery
             // We'll never need to do this again.
             await ControlInfoDataSource.Instance.GetGroupsAsync();
             await IconsDataSource.Instance.LoadIcons();
+            await DashboardDataSource.Instance.GetGroupsAsync();
 
             Frame rootFrame = GetRootFrame();
 
@@ -190,6 +191,14 @@ namespace WinUIGallery
                     targetPageType = typeof(SectionPage);
                 }
                 else if (ControlInfoDataSource.Instance.Groups.Any(g => g.Items.Any(i => i.UniqueId == uri)))
+                {
+                    targetPageType = typeof(ItemPage);
+                }
+                else if (DashboardDataSource.Instance.Groups.Any(g => g.UniqueId == uri))
+                {
+                    targetPageType = typeof(SectionPage);
+                }
+                else if (DashboardDataSource.Instance.Groups.Any(g => g.Items.Any(i => i.UniqueId == uri)))
                 {
                     targetPageType = typeof(ItemPage);
                 }

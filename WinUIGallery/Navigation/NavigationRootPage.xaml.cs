@@ -62,9 +62,9 @@ namespace WinUIGallery
             get
             {
 #if DEBUG
-                return "WinUI 3 Gallery Dev";
+                return "Device Self-Diagnosis Dev";
 #else
-                return "WinUI 3 Gallery";
+                return "Device Self-Diagnosis";
 #endif
             }
         }
@@ -324,6 +324,14 @@ namespace WinUIGallery
                     {
                         Navigate(typeof(DashboardPage));
                     }
+                }
+                else if (selectedItem == Reporting)
+                {
+                    Navigate(typeof(ItemPage), "Grid");
+                }
+                else if (selectedItem == Alarm)
+                {
+                    Navigate(typeof(ItemPage), "GridView");
                 }
                 else if (selectedItem == Home)
                 {

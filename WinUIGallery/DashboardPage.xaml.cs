@@ -15,7 +15,7 @@ using System.Collections.ObjectModel;
 
 namespace WinUIGallery
 {
-    public sealed partial class DashboardPage : ItemsPageBase
+    public sealed partial class DashboardPage : DItemsPageBase
     {
         public DashboardPage()
         {
@@ -27,10 +27,11 @@ namespace WinUIGallery
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             NavigationRootPageArgs args = (NavigationRootPageArgs)e.Parameter;
-            var menuItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.NavigationRootPage.NavigationView.MenuItems.ElementAt(3);
+            //var menuItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.NavigationRootPage.NavigationView.MenuItems.ElementAt(3);
+            var menuItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.NavigationRootPage.NavigationView.MenuItems.First();
             menuItem.IsSelected = true;
 
-            Items = ControlInfoDataSource.Instance.Groups.Where(g => !g.IsSpecialSection).SelectMany(g => g.Items).OrderBy(i => i.Title).ToList();
+            Items = DashboardDataSource.Instance.Groups.Where(g => !g.IsSpecialSection).SelectMany(g => g.Items).OrderBy(i => i.Title).ToList();
             //Items = ControlInfoDataSource.Instance.Groups.SelectMany(g => g.Items.Where(i => i.BadgeString != null)).OrderBy(i => i.Title).ToList();
             itemsDashboardCVS.Source = FormatData();
         }
