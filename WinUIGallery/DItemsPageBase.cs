@@ -64,7 +64,7 @@ namespace WinUIGallery
 
             _itemId = item.UniqueId;
             Debug.Print("OnItemGridViewItemClick: " + _itemId);
-            NavigationRootPage.GetForElement(this).Navigate(typeof(ItemPage), _itemId, new DrillInNavigationTransitionInfo());
+            NavigationRootPage.GetForElement(this).Navigate(typeof(DItemPage), _itemId, new DrillInNavigationTransitionInfo());
         }
 
         protected void OnItemGridViewLoaded(object sender, RoutedEventArgs e)

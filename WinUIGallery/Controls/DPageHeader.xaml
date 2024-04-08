@@ -1,0 +1,50 @@
+<UserControl
+    x:Class="WinUIGallery.DesktopWap.Controls.DPageHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:CommunityToolkit.WinUI.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:data="using:WinUIGallery.Data"
+    xmlns:local="using:WinUIGallery.DesktopWap.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <converters:CollectionVisibilityConverter
+            x:Name="collectionConverter"
+            EmptyValue="Collapsed"
+            NotEmptyValue="Visible" />
+    </UserControl.Resources>
+    <Grid x:Name="headerGrid" Padding="36,24,36,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            AutomationProperties.AutomationId="DPageHeader"
+            Style="{StaticResource TitleTextBlockStyle}"
+            Text="{x:Bind Item.Title}"
+            TextTrimming="CharacterEllipsis"
+            TextWrapping="NoWrap" />
+        <Grid Grid.Row="0">
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button 
+                    x:Name="FinishBtn"
+                    Height="32"
+                    Margin="0,0,4,0">
+                    Finish
+                </Button>
+                <Button
+                    x:Name="ExportBtn"
+                    Height="32"
+                    Background="DodgerBlue">
+                    Export Log
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Rectangle Grid.Row="1" Margin="0,10,0,5" HorizontalAlignment="Stretch" Height="1" Fill="Gray" />
+
+    </Grid>
+</UserControl>
