@@ -7,6 +7,7 @@
     xmlns:data="using:WinUIGallery.Data"
     xmlns:local="using:WinUIGallery.DesktopWap.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="using:System"
     mc:Ignorable="d">
 
     <UserControl.Resources>
@@ -25,7 +26,7 @@
         <TextBlock
             AutomationProperties.AutomationId="DPageHeader"
             Style="{StaticResource TitleTextBlockStyle}"
-            Text="{x:Bind Item.Title}"
+            Text="{x:Bind sys:String.Format('Dashboard > {0}', Item.Title)}"
             TextTrimming="CharacterEllipsis"
             TextWrapping="NoWrap" />
         <Grid Grid.Row="0">

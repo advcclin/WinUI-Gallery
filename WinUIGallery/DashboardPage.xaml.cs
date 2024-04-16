@@ -12,6 +12,7 @@ using System.Linq;
 using Microsoft.UI.Xaml.Navigation;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace WinUIGallery
 {
@@ -45,14 +46,6 @@ namespace WinUIGallery
 
             ObservableCollection<DGroupInfoList> groupList = new ObservableCollection<DGroupInfoList>(query);
 
-            //Move Preview samples to the back of the list
-            var previewGroup = groupList.ElementAt(1);
-            if (previewGroup?.Key.ToString() == "Preview")
-            {
-                groupList.RemoveAt(1);
-                groupList.Insert(groupList.Count, previewGroup);
-            }
-
             foreach (var item in groupList)
             {
                 switch (item.Key.ToString())
@@ -67,7 +60,7 @@ namespace WinUIGallery
                         item.Title = "Preview samples";
                         break;
                     default:
-                        item.Title = "Others";
+                        item.Title = "All Modules";
                         break;
                 }
             }

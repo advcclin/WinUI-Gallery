@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Xml;
 using WinUIGallery.Common;
 using WinUIGallery.DesktopWap.DataModel;
 
@@ -45,7 +46,7 @@ namespace WinUIGallery.Data
     {
         public string UniqueId { get; set; }
         public string Title { get; set; }
-        public string ApiNamespace { get; set; }
+        //public string ApiNamespace { get; set; }
         public string Subtitle { get; set; }
         public string Description { get; set; }
         public string ImagePath { get; set; }
@@ -54,20 +55,20 @@ namespace WinUIGallery.Data
         public string Content { get; set; }
         public bool IsNew { get; set; }
         public bool IsUpdated { get; set; }
-        public bool IsPreview { get; set; }
-        public ObservableCollection<DashboardDocLink> Docs { get; set; }
-        public ObservableCollection<string> RelatedControls { get; set; }
+        public string GroupId { get; set; }
+        //public ObservableCollection<DashboardDocLink> Docs { get; set; }
+        //public ObservableCollection<string> RelatedControls { get; set; }
 
         public bool IncludedInBuild { get; set; }
 
-        public string SourcePath { get; set; }
+        //public string SourcePath { get; set; }
 
         public override string ToString()
         {
             return this.Title;
         }
     }
-
+    /*
     public class DashboardDocLink
     {
         public DashboardDocLink(string title, string uri)
@@ -78,7 +79,7 @@ namespace WinUIGallery.Data
         public string Title { get; set; }
         public string Uri { get; set; }
     }
-
+    */
 
     /// <summary>
     /// Generic group data model.
@@ -91,7 +92,7 @@ namespace WinUIGallery.Data
         public string Description { get; set; }
         public string ImagePath { get; set; }
         public string IconGlyph { get; set; }
-        public string ApiNamespace { get; set; }
+        //public string ApiNamespace { get; set; }
         public bool IsSpecialSection { get; set; }
         public string Folder { get; set; }
         public ObservableCollection<DashboardDataItem> Items { get; set; }
@@ -197,7 +198,6 @@ namespace WinUIGallery.Data
                     {
                         { IsNew: true } => "New",
                         { IsUpdated: true } => "Updated",
-                        { IsPreview: true } => "Preview",
                         _ => ""
 
                     };

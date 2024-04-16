@@ -57,11 +57,7 @@
           "Subtitle": "A feature to display developer-defined errors for text values",
           "ImagePath": "ms-appx:///Assets/ControlImages/InputValidation.png",
           "Description": "A feature that will display an error for invalid text. The app is notified when text has been changed by the user and is responsible for determining whether the text is valid and the error message",
-          "Content": "<p>Look at the <i>InputValidationPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
-          "RelatedControls": [
-            "TextBox",
-            "PasswordBox"
-          ]
+          "Content": "<p>Look at the <i>InputValidationPage.xaml</i> file in Visual Studio to see the full code for this page.</p>"
         },
         {
           "UniqueId": "Button",
@@ -76,8 +72,8 @@
       ]
     },
     {
-      "UniqueId": "Styles",
-      "Title": "Styles",
+      "UniqueId": "Peripherals",
+      "Title": "Peripherals",
       "ImagePath": "",
       "IconGlyph": "",
       "Items": [
@@ -98,8 +94,8 @@
           "SourcePath": "/Materials/Acrylic"
         },
         {
-          "UniqueId": "AnimatedIcon",
-          "Title": "AnimatedIcon",
+          "UniqueId": "Cashdraw",
+          "Title": "Cashdraw",
           "Subtitle": "An element that displays and controls an icon that animates when the user interacts with the control.",
           "ImagePath": "ms-appx:///Assets/ControlImages/AnimatedIcon.png",
           "Description": "An element that displays and controls an icon that animates when the user interacts with the control.",
@@ -108,22 +104,22 @@
           "SourcePath": "/AnimatedIcon"
         },
         {
-          "UniqueId": "ColorPaletteResources",
-          "Title": "ColorPaletteResources",
+          "UniqueId": "Printer",
+          "Title": "Printer",
           "Subtitle": "A type of resource that allows you to apply custom colors to your controls.",
           "ImagePath": "ms-appx:///Assets/ControlImages/ColorPaletteResources.png",
           "Description": "Apply custom colors to your controls through this cascading API, or scope them to a local subset."
         },
         {
-          "UniqueId": "CompactSizing",
-          "Title": "Compact Sizing",
+          "UniqueId": "Camera",
+          "Title": "Camera",
           "Subtitle": "How to use a Resource Dictionary to enable compact sizing.",
           "ImagePath": "ms-appx:///Assets/ControlImages/CompactSizing.png",
           "Description": "Compact dictionary included in WinUI 2.1. Allows you to create compact smaller apps by adding this at the page or the grid level."
         },
         {
-          "UniqueId": "IconElement",
-          "Title": "IconElement",
+          "UniqueId": "Touchscreen",
+          "Title": "Touchscreen",
           "Subtitle": "Represents icon controls that use different image types as its content.",
           "ImagePath": "ms-appx:///Assets/ControlImages/Image.png",
           "Description": "Represents icon controls that use different image types as its content.",
@@ -131,8 +127,8 @@
           "SourcePath": "/ImageIcon"
         },
         {
-          "UniqueId": "RevealFocus",
-          "Title": "Reveal Focus",
+          "UniqueId": "Bluetooth",
+          "Title": "Bluetooth",
           "Subtitle": "Customize the style of your focus rectangles.",
           "ImagePath": "ms-appx:///Assets/ControlImages/RevealFocus.png",
           "Description": "Reveal focus allows you to adapt focus rectangles to look like the focus rectangles available on Xbox.",
@@ -149,22 +145,12 @@
           "Content": "<p>Scan and List <i> USB </i> devices .</p>"
         },
         {
-          "UniqueId": "Line",
-          "Title": "Line",
+          "UniqueId": "WiFi",
+          "Title": "WiFi",
           "Subtitle": "Draws a straight line between two points.",
           "ImagePath": "ms-appx:///Assets/ControlImages/Line.png",
           "Description": "Draws a straight line between two points.",
           "Content": "<p>Look at the <i>LinePage.xaml</i> file in Visual Studio to see the full code for this page.</p>"
-        },
-
-        {
-          "UniqueId": "SystemBackdrops",
-          "Title": "System Backdrops (Mica/Acrylic)",
-          "Subtitle": "System backdrops, like Mica and Acrylic, for the window.",
-          "ImagePath": "ms-appx:///Assets/ControlImages/Acrylic.png",
-          "Description": "System backdrops are used to provide a different background for a Window other than the default white or black (depending on Light or Dark theme). Mica and Desktop Acrylic are the current supported backdrops. There are two options for applying a backdrop: first, to use built-in Mica/Acrylic types, which have no customization and are simple to apply. The second is to create a customizable backdrop, which requires more code.",
-          "Content": "<p>Look at the <i>SampleSystemBackdropsWindow.xaml.cs</i> file in Visual Studio to see the full code for applying a backdrop.</p>",
-          "SourcePath": "/Materials"
         }
       ]
     },
@@ -175,8 +161,8 @@
       "IconGlyph": "",
       "Items": [
         {
-          "UniqueId": "Clipboard",
-          "Title": "Clipboard",
+          "UniqueId": "Audio",
+          "Title": "Audio",
           "Subtitle": "Copy and paste to and from the system Clipboard.",
           "ImagePath": "ms-appx:///Assets/ControlImages/Clipboard.png",
           "Description": "Copy and paste to and from the system Clipboard.",
@@ -184,8 +170,8 @@
           "IsNew": true
         },
         {
-          "UniqueId": "FilePicker",
-          "Title": "FilePicker",
+          "UniqueId": "Display",
+          "Title": "Display",
           "Subtitle": "Access files and folders through the file pickers.",
           "ImagePath": "ms-appx:///Assets/ControlImages/FilePicker.png",
           "Description": "Shows how to access files and folders by letting the user choose them through the file pickers and how to save a file so that the user can specify the name, file type, and location of a file to save.",

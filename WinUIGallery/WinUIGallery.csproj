@@ -98,6 +98,7 @@
             just add versionless PackageReferences here.  They will be updated to their actual versions by either the Packages.props file
             in the WinUI repo, or the next ItemGroup below when standalone. -->
     <ItemGroup>
+        <PackageReference Include="CommunityToolkit.WinUI.UI.Controls" Version="7.1.2" />
         <PackageReference Include="Microsoft.WindowsAppSDK" />
         <PackageReference Include="ColorCode.Core" />
         <PackageReference Include="Microsoft.Graphics.Win2D" />
@@ -280,13 +281,13 @@
         directory.  The default behavior is easier, so we'll mimic that here.-->
     <Target Name="AddCopyToPublishDirectoryItems" Condition="'$(PublishSingleFile)'=='true'" BeforeTargets="GetCopyToPublishDirectoryItems" DependsOnTargets="AssignTargetPaths">
         <ItemGroup>
-            <CurrentContentWithTargetPath Include="@(ContentWithTargetPath)"/>
-            <ContentWithTargetPath Remove="@(CurrentContentWithTargetPath )"/>
+            <CurrentContentWithTargetPath Include="@(ContentWithTargetPath)" />
+            <ContentWithTargetPath Remove="@(CurrentContentWithTargetPath )" />
             <ContentWithTargetPath Include="@(CurrentContentWithTargetPath )">
                 <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             </ContentWithTargetPath>
-            <CurrentNoneWithTargetPath Include="@(_NoneWithTargetPath)"/>
-            <_NoneWithTargetPath Remove="@(CurrentNoneWithTargetPath )"/>
+            <CurrentNoneWithTargetPath Include="@(_NoneWithTargetPath)" />
+            <_NoneWithTargetPath Remove="@(CurrentNoneWithTargetPath )" />
             <_NoneWithTargetPath Include="@(CurrentNoneWithTargetPath )">
                 <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             </_NoneWithTargetPath>

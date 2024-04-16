@@ -44,6 +44,7 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
+
         <GridView
             x:Name="itemGridView"
             Padding="24,0,24,0"
@@ -63,6 +64,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50" />
                         <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
                     </Grid.RowDefinitions>
                     <controls:DashboardPageHeaderImage
                         Grid.RowSpan="2"
@@ -84,6 +86,14 @@
                         x:Name="headerTile"
                         Grid.Row="1"
                         Margin="0,0,0,0" />
+                    <TextBlock
+                        Grid.Row="2"
+                        Margin="36,0,0,0"
+                        AutomationProperties.AutomationId="DiagToolHeader"
+                        Style="{StaticResource TitleTextBlockStyle}"
+                        Text="Diagnosis tools"
+                        TextTrimming="CharacterEllipsis"
+                        TextWrapping="NoWrap" />
                 </Grid>
             </GridView.Header>
 
